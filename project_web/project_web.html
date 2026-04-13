@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+
+        
+body {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight:400;
+  font-style: normal;
+}
+:root{
+    --color:#07223e;
+}
+.navv{
+    height: 10vh;
+    width: 100vw;
+    background-color: #fff;
+    
+  box-shadow: 0 4px 20px rgba(232, 232, 236, 0.15);
+}
+a.underline{
+    
+    text-decoration: underline !important;
+    color:var(--color) !important ;
+     text-underline-offset: 0.9em;
+    
+}
+#bold{
+     font-weight:600;
+   
+}
+a.navbar-brand{
+    color:var(--color);
+    font-weight: bold;
+    transition: all ease-in-out 0.7s;
+    
+}
+.bnav{
+    background-color: var(--color);
+    color: #fff;
+  border-radius: 10px;
+ transition: all ease-in-out 0.7s;
+
+}
+.bnav:hover , a.navbar-brand:hover{
+   
+   
+    
+    transform: scale(1.2);
+  
+}
+.doctor{
+    background-color: var(--color);
+}
+#loon{
+    color:rgb(114, 114, 146) ;
+}
+.btn1 {
+    border: none;
+    border-radius: 12px;
+    outline: none;
+    background-color: rgb(114, 114, 146);
+    color: #fff;
+     font-weight: 500;
+}
+
+.white-nass {
+    color: white;
+   
+}
+
+
+.nass1 {
+    display: flex;
+}
+
+.ver {
+    position: relative;
+}
+.card{
+    background-color: rgb(226, 224, 224) !important;
+    border: 0px solid  rgb(226, 224, 224) !important;
+   
+
+}
+
+.ver::after {
+    position: absolute;
+    right: -20%;
+    top: 5%;
+    height: 8vh;
+    content: "";
+    width: 0.1vw;
+    color: white;
+    display: block;
+    background-color: white;
+}
+
+
+.nass h5 {
+    color: #fff;
+}
+p.white-nass{
+    word-spacing:0.2em;
+}
+.slot{
+    border: none;
+    border-radius:10px ;
+    font-weight: 600;
+    width: 8em;
+    height: 2.5em;
+    background-color: grey;
+}
+.active {
+    background-color: #fff;
+}
+.book-btn{
+      border: none;
+    border-radius:10px ;
+    font-weight: 600;
+    width: 16em;
+    height: 2.5em;
+
+}
+
+.appointment-card{
+    background-color: var(--color);
+    border-radius: 15px;
+      display: flex;
+     justify-content: start;
+     align-items:start;
+     flex-direction: column;
+}
+.appointment-card span ,.appointment-card h4,.appointment-card label, .appointment-card i, .appointment-card p {
+    color: #fff;
+}
+.date-box{
+    background-color: grey;
+    border-radius: 5px;
+    width: 16rem;
+    display: flex;
+   justify-content: space-between;
+}
+.map_ex{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.maps{
+     width: 100%;
+    border-radius: 20px;
+    object-fit: cover;
+   
+  
+}
+img.maps{
+   height: 20em;
+}
+img.rev{
+    height: 5em;
+    width: 5em;
+    object-fit: cover;
+    border-radius: 50%;
+}
+.revi{
+background-color: rgb(226, 224, 224);
+border-radius: 20px;
+}
+.flex{
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+}
+.stars i{
+    color:yellow;
+}
+
+@media (max-width: 768px){
+  .navbar-brand{
+    order: 1;
+  }
+
+  .bnav{
+    order: 2;
+  }
+
+  .navbar-toggler{
+    order: 3;
+  }
+}
+@media (max-width: 340px){
+    .book-btn ,.date-box{
+        width: 10em;
+    }
+
+}
+@media (width: 1024px){
+    .book-btn ,.date-box{
+        width: 10em;
+    }
+
+}
+
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paws n'play</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+
+
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lora:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <section class="navv  ">
+   <div class="container ">
+
+    <nav class="navbar navbar-expand-lg bg-body-tertiary ">
+  
+    <a class="navbar-brand" href="#">Paws n'play</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="offcanvas offcanvas-start" tabindex="-1" id="navbarNav">
+        <div class="offcanvas-header">
+  <h5 class="offcanvas-title">Menu</h5>
+  <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+</div>
+<div class="offcanvas-body">
+      <ul class="navbar-nav mx-auto">
+        <li class="nav-item">
+          <a class="nav-link  disabled"  aria-disabled="true" href="#">Shop</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active underline " id="bold" href="#" >Services</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link  disabled" aria-disabled="true" href="#">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link disabled" aria-disabled="true">blog</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link disabled" aria-disabled="true">contact</a>
+        </li>
+      </ul>
+    </div>
+    </div>
+   
+  
+ 
+  <button class=" bnav p-1">Get started</button>
+</nav>
+ </div>
+  </section>
+ <section class="doctor">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6 md-6 sm-12 py-3 ">
+<img src="Overlay+Shadow.png " class="img-fluid">
+            </div>
+        
+            <div class="col-lg-6 md-6 sm-12 py-5">
+    <button class="btn1  py-2 px-2">order now</button>
+         <button class="btn1 py-2">book an appointment</button>
+         <h1 class="white-nass py-4">Dr. Ahmed ali, <span  id="loon">DVM</span></h1>
+         <p class="white-nass  py-3">is an experienced physician with over 12 years in specialty, e.g., cardiology.
+He has extensive expertise in diagnosing and treating specific conditions or procedures.
+Dr.Ahmedis committed to patient-centered care and staying updated with the latest medical advancements.
+He has contributed to several research publications and professional conferences in the field.</p>
+<div class="nass1 py-4">
+<div class="nass ver">
+<h5  id="loon">Expereience </h5>
+<h5>14+ years</h5>
+</div>
+<div class="nass mx-5 ">
+<h5 id="loon">Graduated</h5>
+<h5>South-Valley</h5>
+</div>
+</div>
+            </div>
+        </div>
+    </div>
+ </section>
+ <div class="container">
+ <div class="row py-5">
+    <div class="col-lg-8">
+        <div class="row gap-4">
+    <h2 class="py-3">Offered Services</h2>
+  <div class="col-lg-5 py-3">
+<div class="card  p-3">
+
+    <i class="bi bi-bag-heart-fill fs-4"></i>
+    <h4>Health Care</h4>
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing.</p>
+
+
+
+</div>
+  </div>
+  <div class="col-lg-5 py-3">
+<div class="card p-3">
+
+    <i class="bi bi-heart-fill fs-4"></i>
+    <h4>Health Care</h4>
+  <p>Lorem ipsum dolor, sit amet consectetur adipisicing.</p>
+</div>
+
+
+  </div>
+</div>
+    
+ 
+ <div class="row gap-4">
+    
+  <div class="col-lg-5 py-3">
+<div class="card  p-3">
+
+   <i class="bi bi-hospital fs-4"></i>
+    <h4>Health Care</h4>
+     <p>Lorem ipsum dolor, sit amet consectetur adipisicing.</p>
+</div>
+
+
+
+</div>
+  <div class="col-lg-5 py-3">
+<div class="card  p-3">
+
+    <i class="bi bi-asterisk fs-4"></i>
+    <h4>Health Care</h4>
+ <p>Lorem ipsum dolor, sit amet consectetur adipisicing.</p>
+</div>
+
+
+  </div>
+</div>
+
+ </div>
+ <div class="col-lg-4 py-4">
+
+   <div class="appointment-card p-5 ">
+
+  <h4 class="py-1 ">Book an Appointment</h4>
+
+  <label class="p-2">choose a date</label>
+  <div class="date-box my-2 p-2">
+    <span>October 24, 2024</span>
+    <i class="bi bi-calendar calender"></i>
+  </div>
+
+  <label class="p-2">available slots</label>
+
+  <div class="slots  ">
+    <div class="b">
+    <button class="slot my-2">09:00 AM</button>
+    <button class="slot active my-2">11:30 AM</button>
+    </div>
+    <button class="slot my-2">02:00 PM</button>
+    <button class="slot my-2">04:30 PM</button>
+  </div>
+
+  <button class="book-btn active ">Book Appointment</button>
+
+  <p class="note my-2 ">
+    Free cancellation up to 24 hours before
+  </p>
+
+</div>
+</div>
+</div>
+ </div>
+ <section class="map">
+    <div class="container">
+<div class="row">
+
+
+    <div class="col-lg-12 map_ex">
+        <div class="kalam">
+<h4>Clinic location </h4>
+<p>cairo, orab street</p>
+</div>
+        <div class="kalam">
+
+<p>cairo, orab street</p>
+
+
+</div>
+
+
+    </div>
+</div>
+<div class="row">
+    <div class="col-lg-12">
+        <img src="pexels-geojango-maps-50965933-7663519.jpg" class="img-fluid maps">
+    </div>
+</div>
+
+
+
+
+
+    </div>
+ </section>
+ <section class="review py-5">
+    <div class="container">
+    <div class="row flex">
+        <div class="col-lg-5 revi p-2  my-3">
+              <img src="pexels-shkrabaanthony-6749777.jpg" class="img-fluid rev">
+            <span>Ali Mahmoud </span>
+           
+            
+            <div class="stars d-flex justify-content-end">
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+            </div>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Debitis alias iure obcaecati aliquam laborum velit</p>
+        </div>
+        
+        <div class="col-lg-5 revi p-2 my-3">
+ <img src="pexels-rdne-6129501.jpg" class="img-fluid rev">
+            <span>Ali Mahmoud </span>
+           
+            
+            <div class="stars d-flex justify-content-end">
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+            </div>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Debitis alias iure obcaecati aliquam laborum velit</p>
+    
+        </div>
+    </div>
+    </div>
+ </section>
+    
+</body>
+</html>
